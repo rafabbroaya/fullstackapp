@@ -1,0 +1,76 @@
+Arguments: 
+  C:\desarrollo\intellij_workspace_test\fullstackapp\frontend\node\node.exe C:\desarrollo\intellij_workspace_test\fullstackapp\frontend\node\yarn\dist\bin\yarn.js install
+
+PATH: 
+  C:\desarrollo\intellij_workspace_test\fullstackapp\frontend\node;C:\desarrollo\intellij_workspace_test\fullstackapp\frontend\node\yarn\dist\bin;C:\Users\raasanch\Documents\Progs\cmder\bin;C:\Users\raasanch\Documents\Progs\cmder\vendor\conemu-maximus5\ConEmu\Scripts;C:\Users\raasanch\Documents\Progs\cmder\vendor\conemu-maximus5;C:\Users\raasanch\Documents\Progs\cmder\vendor\conemu-maximus5\ConEmu;C:\Program Files\IBM\WebSphere MQ\java\lib;C:\Program Files\IBM\WebSphere MQ\java\lib64;C:\ProgramData\Oracle\Java\javapath;C:\Ruby24-x64\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\UCRT\;C:\Program Files\Intel\UCRT\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Maven\apache-maven-3.3.9\bin;C:\Gradle\gradle-3.5\bin;C:\Program Files\PuTTY\;C:\Users\raasanch\AppData\Local\Programs\Python\Python36-32\;C:\Users\raasanch\Documents\Progs\sonar-runner-2.4\bin;C:\Java\jdk1.8.0_151\bin;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\HashiCorp\Vagrant\bin;C:\Users\raasanch\Documents\Progs\sonarlint-cli-2.1.0.566\bin;C:\Program Files (x86)\pgmodeler;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\nodejs\;C:\Users\raasanch\Documents\Progs\curl-7.57.0\src;C:\Program Files\IBM\WebSphere MQ\bin64;C:\Program Files\IBM\WebSphere MQ\bin;C:\Program Files\IBM\WebSphere MQ\tools\c\samples\bin;C:\Yarn\bin\;C:\Program Files\Heroku\bin;C:\Users\raasanch\AppData\Roaming\npm;C:\Program Files\Microsoft VS Code\bin;C:\Users\raasanch\AppData\Local\Yarn\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\share\vim\vim74;C:\Users\raasanch\Documents\Progs\cmder\;
+
+Yarn version: 
+  1.3.2
+
+Node version: 
+  8.9.0
+
+Platform: 
+  win32 x64
+
+npm manifest: 
+  {
+    "name": "frontend",
+    "version": "0.0.0",
+    "license": "MIT",
+    "scripts": {
+      "ng": "ng",
+      "start": "ng serve",
+      "build": "ng build --prod",
+      "test": "ng test",
+      "lint": "ng lint",
+      "e2e": "ng e2e"
+    },
+    "private": true,
+    "dependencies": {
+      "@angular/animations": "^5.2.0",
+      "@angular/common": "^5.2.0",
+      "@angular/compiler": "^5.2.0",
+      "@angular/core": "^5.2.0",
+      "@angular/forms": "^5.2.0",
+      "@angular/http": "^5.2.0",
+      "@angular/platform-browser": "^5.2.0",
+      "@angular/platform-browser-dynamic": "^5.2.0",
+      "@angular/router": "^5.2.0",
+      "core-js": "^2.4.1",
+      "rxjs": "^5.5.6",
+      "zone.js": "^0.8.19"
+    },
+    "devDependencies": {
+      "@angular/cli": "~1.7.3",
+      "@angular/compiler-cli": "^5.2.0",
+      "@angular/language-service": "^5.2.0",
+      "@types/jasmine": "~2.8.3",
+      "@types/jasminewd2": "~2.0.2",
+      "@types/node": "~6.0.60",
+      "codelyzer": "^4.0.1",
+      "jasmine-core": "~2.8.0",
+      "jasmine-spec-reporter": "~4.2.1",
+      "karma": "~2.0.0",
+      "karma-chrome-launcher": "~2.2.0",
+      "karma-coverage-istanbul-reporter": "^1.2.1",
+      "karma-jasmine": "~1.1.0",
+      "karma-jasmine-html-reporter": "^0.2.2",
+      "protractor": "~5.1.2",
+      "ts-node": "~4.1.0",
+      "tslint": "~5.9.1",
+      "typescript": "~2.5.3"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: connect ETIMEDOUT 104.16.61.173:443
+      at Object._errnoException (util.js:1024:11)
+      at _exceptionWithHostPort (util.js:1046:20)
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1182:14)
