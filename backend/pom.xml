@@ -7,7 +7,9 @@
   <groupId>com.rsanchezg</groupId>
   <artifactId>backend</artifactId>
   <version>${project.parent.version}</version>
-  <packaging>war</packaging>
+  <!--prod-->
+  <!--<packaging>war</packaging>-->
+  <packaging>jar</packaging>
 
   <name>backend</name>
   <description>Spring Boot</description>
@@ -52,11 +54,12 @@
       <artifactId>spring-security-test</artifactId>
       <scope>test</scope>
     </dependency>
-    <dependency>
+    <!--Prod-->
+    <!--<dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-tomcat</artifactId>
       <scope>provided</scope>
-    </dependency>
+    </dependency>-->
     <dependency>
       <groupId>com.rsanchezg</groupId>
       <artifactId>frontend</artifactId>
@@ -65,10 +68,31 @@
   </dependencies>
 
   <build>
+    <finalName>fullstackapp</finalName>
     <plugins>
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <artifactId>maven-resources-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>copy-resources</id>
+            <phase>validate</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${basedir}/target/classes/static/</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>${basedir}/../frontend/dist</directory>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>

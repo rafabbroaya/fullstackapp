@@ -11,10 +11,10 @@
 	<name>frontend</name>
 	<description>Angular5</description>
 
-	<parent>		
+	<parent>
 		<groupId>com.rsanchezg</groupId>
 		<artifactId>fullstackapp</artifactId>
-		<version>0.0.1-SNAPSHOT</version>		
+		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
 	<build>
@@ -67,11 +67,11 @@
             <configuration>
               <arguments>build</arguments>
             </configuration>
-          </execution>          
+          </execution>
         </executions>
       </plugin>
     </plugins>
   </build>
-	
+
 
 </project>
