@@ -26,6 +26,12 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
+## Development deployment
+
+In backend module execute: `mvn clean install` and `mvn spring-boot:run`
+
+In frontend module execute: `ng serve --proxy-conf proxy.conf.json` 
+
 ## Production deployment
 
 To deploy in a production environment:

@@ -1,0 +1,8 @@
+security:
+  ignored:
+  - "*.bundle.*"
+  user:
+    name: rafael
+    password: rafael
+server:
+  port: 8080
