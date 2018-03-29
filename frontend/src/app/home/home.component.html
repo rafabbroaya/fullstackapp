@@ -1,9 +1,9 @@
 <h1>Greeting</h1>
-<div [hidden]="!authenticated()">
+<div [hidden]="!isAuthenticated()">
   <p>Id {{greeting.id}}</p>
   <p>Message {{greeting.content}}</p>
 </div>
 
-<div [hidden]="authenticated()">
+<div [hidden]="isAuthenticated()">
   <p>Login to see your greeting</p>
 </div>

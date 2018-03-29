@@ -1,5 +1,5 @@
 Arguments: 
-  C:\desarrollo\intellij_workspace_test\fullstackapp\frontend\node\node.exe C:\desarrollo\intellij_workspace_test\fullstackapp\frontend\node\yarn\dist\bin\yarn.js lint
+  C:\desarrollo\intellij_workspace_test\fullstackapp\frontend\node\node.exe C:\desarrollo\intellij_workspace_test\fullstackapp\frontend\node\yarn\dist\bin\yarn.js install
 
 PATH: 
   C:\desarrollo\intellij_workspace_test\fullstackapp\frontend\node;C:\desarrollo\intellij_workspace_test\fullstackapp\frontend\node\yarn\dist\bin;C:\Program Files\IBM\WebSphere MQ\java\lib;C:\Program Files\IBM\WebSphere MQ\java\lib64;C:\ProgramData\Oracle\Java\javapath;C:\Ruby24-x64\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\UCRT\;C:\Program Files\Intel\UCRT\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Maven\apache-maven-3.3.9\bin;C:\Gradle\gradle-3.5\bin;C:\Program Files\PuTTY\;C:\Users\raasanch\AppData\Local\Programs\Python\Python36-32\;C:\Users\raasanch\Documents\Progs\sonar-runner-2.4\bin;C:\Java\jdk1.8.0_151\bin;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\HashiCorp\Vagrant\bin;C:\Users\raasanch\Documents\Progs\sonarlint-cli-2.1.0.566\bin;C:\Program Files (x86)\pgmodeler;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\nodejs\;C:\Users\raasanch\Documents\Progs\curl-7.57.0\src;C:\Program Files\IBM\WebSphere MQ\bin64;C:\Program Files\IBM\WebSphere MQ\bin;C:\Program Files\IBM\WebSphere MQ\tools\c\samples\bin;C:\Yarn\bin\;C:\Program Files\Heroku\bin;C:\Users\raasanch\AppData\Roaming\npm;C:\Program Files\Microsoft VS Code\bin;C:\Users\raasanch\AppData\Local\Yarn\bin;
@@ -21,7 +21,7 @@ npm manifest:
     "scripts": {
       "ng": "ng",
       "start": "ng serve",
-      "build": "ng build --prod --aot",
+      "build": "ng build --prod --aot --base-href /fullstackapp/",
       "test": "ng test",
       "lint": "ng lint",
       "e2e": "ng e2e"
@@ -39,6 +39,7 @@ npm manifest:
       "@angular/router": "^5.2.0",
       "bootstrap": "^3.3.7",
       "core-js": "^2.4.1",
+      "jquery": "^3.3.1",
       "rxjs": "^5.5.6",
       "zone.js": "^0.8.19"
     },
@@ -7186,14 +7187,6 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/zone.js/-/zone.js-0.8.20.tgz#a218c48db09464b19ff6fc8f0d4bb5b1046e185d"
 
 Trace: 
-  Error: write EPIPE
-      at _errnoException (util.js:1024:11)
-      at Socket._writeGeneric (net.js:767:25)
-      at Socket._write (net.js:786:8)
-      at doWrite (_stream_writable.js:387:12)
-      at writeOrBuffer (_stream_writable.js:373:5)
-      at Socket.Writable.write (_stream_writable.js:290:11)
-      at Socket.write (net.js:704:40)
-      at ConsoleReporter._log (C:\desarrollo\intellij_workspace_test\fullstackapp\frontend\node\yarn\dist\lib\cli.js:87285:17)
-      at ConsoleReporter.log (C:\desarrollo\intellij_workspace_test\fullstackapp\frontend\node\yarn\dist\lib\cli.js:87272:10)
-      at ConsoleReporter.footer (C:\desarrollo\intellij_workspace_test\fullstackapp\frontend\node\yarn\dist\lib\cli.js:87262:10)
+  Error: getaddrinfo ENOTFOUND registry.yarnpkg.com registry.yarnpkg.com:443
+      at errnoException (dns.js:50:10)
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:92:26)

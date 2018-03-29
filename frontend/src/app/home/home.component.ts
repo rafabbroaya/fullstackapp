@@ -12,13 +12,14 @@ export class HomeComponent {
   greeting = {'id': '', 'content': ''};
 
   constructor(private appService: AppService, private http: HttpClient) {
-    http.get('token').subscribe(data => {
+    http.get('api/token').subscribe(data => {
       const token = data['token'];
-      http.get('http://localhost:8181/api/items', {headers: new HttpHeaders().set('X-Auth-Token', token)}).subscribe((data: { 'id': '', 'content': '' }) => this.greeting = data);
+      http.get('http://localhost:8181/api/items',
+        {headers: new HttpHeaders().set('X-Auth-Token', token)}).subscribe((result: { 'id': '', 'content': '' }) => this.greeting = result);
     });
   }
 
-  authenticated() {
+  isAuthenticated() {
     return this.appService.authenticated;
   }
 }

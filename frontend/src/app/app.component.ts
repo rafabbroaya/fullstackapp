@@ -11,6 +11,8 @@ import 'rxjs/add/operator/finally';
 })
 export class AppComponent {
 
+  isCollapsed = true;
+
   constructor(private appService: AppService, private http: HttpClient, private router: Router) {
     this.appService.authenticate(undefined, undefined);
   }
@@ -20,5 +22,9 @@ export class AppComponent {
       this.appService.authenticated = false;
       this.router.navigateByUrl('/login');
     }).subscribe();
+  }
+
+  isAuthenticated() {
+    return this.appService.authenticated;
   }
 }
