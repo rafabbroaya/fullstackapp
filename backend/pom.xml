@@ -8,8 +8,8 @@
   <artifactId>backend</artifactId>
   <version>${project.parent.version}</version>
   <!--prod-->
-  <!--<packaging>war</packaging>-->
-  <packaging>jar</packaging>
+  <packaging>war</packaging>
+  <!--<packaging>jar</packaging>-->
 
   <name>backend</name>
   <description>Spring Boot</description>
@@ -63,11 +63,11 @@
       <artifactId>spring-boot-starter-data-redis</artifactId>
     </dependency>
     <!--Prod-->
-    <!--<dependency>-->
-    <!--<groupId>org.springframework.boot</groupId>-->
-    <!--<artifactId>spring-boot-starter-tomcat</artifactId>-->
-    <!--<scope>provided</scope>-->
-    <!--</dependency>-->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-tomcat</artifactId>
+      <scope>provided</scope>
+    </dependency>
     <dependency>
       <groupId>com.rsanchezg</groupId>
       <artifactId>frontend</artifactId>
