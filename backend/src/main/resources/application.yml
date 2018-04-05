@@ -9,4 +9,6 @@ server:
 spring:
   session:
     store-type: redis
+  redis:
+    host: redis
 
