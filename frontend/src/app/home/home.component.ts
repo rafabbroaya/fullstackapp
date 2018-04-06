@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {AppService} from '../app.service';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {Constants} from '../constants';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +15,7 @@ export class HomeComponent {
   constructor(private appService: AppService, private http: HttpClient) {
     http.get('api/token').subscribe(data => {
       const token = data['token'];
-      http.get('http://localhost:8181/api/items',
+      http.get(Constants.INVENTORY_API_ENDPOINT + '/items',
         {headers: new HttpHeaders().set('X-Auth-Token', token)}).subscribe((result: { 'id': '', 'content': '' }) => this.greeting = result);
     });
   }
