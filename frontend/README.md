@@ -38,4 +38,4 @@ To deploy in a production environment:
  
 Modify `backend\pom.xml` and uncomment prod tags
 
-Build Angular application like these: `ng build --prod --aot --base-href /fullstackapp/`
+Build Angular application like these: `ng build --prod --aot --base-href /ui/`

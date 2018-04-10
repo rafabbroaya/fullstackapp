@@ -76,7 +76,7 @@
   </dependencies>
 
   <build>
-    <finalName>fullstackapp</finalName>
+    <finalName>ui</finalName>
     <plugins>
       <plugin>
         <groupId>org.springframework.boot</groupId>
