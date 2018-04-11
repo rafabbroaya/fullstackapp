@@ -1,14 +1,17 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {AppService} from '../app.service';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Constants} from '../constants';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.css']
 })
-export class HomeComponent {
+export class DashboardComponent implements OnInit {
+
+  ngOnInit() {
+  }
 
   greeting = {'id': '', 'content': ''};
 
@@ -23,4 +26,5 @@ export class HomeComponent {
   isAuthenticated() {
     return this.appService.authenticated;
   }
+
 }

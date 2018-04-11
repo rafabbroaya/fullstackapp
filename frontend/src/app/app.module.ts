@@ -11,15 +11,17 @@ import {
   HttpRequest
 } from '@angular/common/http';
 import {RouterModule, Routes} from '@angular/router';
-import {HomeComponent} from './home/home.component';
 import {LoginComponent} from './login/login.component';
 import {FormsModule} from '@angular/forms';
 import {AppService} from './app.service';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ItemsComponent } from './items/items.component';
 
 const routes: Routes = [
-  {path: '', pathMatch: 'full', redirectTo: 'home'},
-  {path: 'home', component: HomeComponent},
-  {path: 'login', component: LoginComponent}
+  {path: '', pathMatch: 'full', redirectTo: 'dashboard'},
+  {path: 'dashboard', component: DashboardComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'items', component: ItemsComponent}
 ];
 
 @Injectable()
@@ -36,8 +38,9 @@ export class XhrInterceptor implements HttpInterceptor {
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    LoginComponent
+    LoginComponent,
+    DashboardComponent,
+    ItemsComponent
   ],
   imports: [
     RouterModule.forRoot(routes, {useHash: true}),
