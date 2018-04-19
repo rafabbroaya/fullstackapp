@@ -18,7 +18,7 @@ export class DashboardComponent implements OnInit {
   constructor(private appService: AppService, private http: HttpClient) {
     http.get('api/token').subscribe(data => {
       const token = data['token'];
-      http.get(Constants.INVENTORY_API_ENDPOINT + '/items',
+      http.get(Constants.INVENTORY_ITEMS,
         {headers: new HttpHeaders().set('X-Auth-Token', token)}).subscribe((result: { 'id': '', 'content': '' }) => this.greeting = result);
     });
   }
