@@ -42,7 +42,8 @@ export class XhrInterceptor implements HttpInterceptor {
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    ItemsComponent
+    ItemsComponent,
+    ItemEditComponent
   ],
   imports: [
     RouterModule.forRoot(routes, {useHash: true}),
