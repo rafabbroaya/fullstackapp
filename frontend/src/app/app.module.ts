@@ -14,14 +14,16 @@ import {RouterModule, Routes} from '@angular/router';
 import {LoginComponent} from './login/login.component';
 import {FormsModule} from '@angular/forms';
 import {AppService} from './app.service';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { ItemsComponent } from './items/items.component';
+import {DashboardComponent} from './dashboard/dashboard.component';
+import {ItemsComponent} from './items/items.component';
+import {ItemEditComponent} from './items/item-edit/item-edit.component';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'dashboard'},
   {path: 'dashboard', component: DashboardComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'items', component: ItemsComponent}
+  {path: 'items', component: ItemsComponent},
+  {path: 'item', component: ItemEditComponent}
 ];
 
 @Injectable()
