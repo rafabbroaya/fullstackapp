@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+.money {
+  color: #B12704!important;
+}
+
+.normal-text {
+  font-size: small;
+}
+
+.medium-text {
+  font-size: medium;
+}
+
+.large-text {
+  font-size: large;
+}
+
+.success-text {
+  color: green;
+  font-weight: bold;
+}
+
+.error-text {
+  color: darkred;
+}

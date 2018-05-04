@@ -36,7 +36,7 @@ export class ItemEditComponent implements OnInit, OnChanges {
 
   onSubmit(f: NgForm) {
     const value = f.value;
-    const item = new Item(null, value.sellingPrice, value.description, this.image);
+    const item = new Item(null, value.stock, value.sellingPrice, value.name, value.description, this.image);
 
     this.itemsService.getToken().subscribe(token => {
       this.itemsService.addItem(token['token'], item).subscribe(item => {

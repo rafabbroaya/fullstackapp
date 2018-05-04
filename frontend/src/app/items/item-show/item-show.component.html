@@ -1,3 +1,20 @@
-<p>
-  item-show works!
-</p>
+<div *ngIf="item">
+  <div class="col-lg-7">
+    <app-item-image [base64Image]="item.base64Image"></app-item-image>
+  </div>
+  <div class="col-lg-5">
+    <div class="row"><h3>{{item.name}}</h3></div>
+    <hr>
+    <div class="row"><span class="normal-text">Price: </span><span class="money medium-text">${{item.sellingPrice}}</span>
+    </div>
+    <div class="row">
+      <span *ngIf="item.stock>10; else noStock" class="medium-text success-text">In Stock</span>
+      <ng-template #noStock>
+        <span class="medium-text error-text">Only {{item.stock}} left in stock - order soon.</span>
+      </ng-template>
+    </div>
+    <div class="row"><span>{{item.description}}</span></div>
+  </div>
+
+</div>
+

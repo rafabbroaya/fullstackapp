@@ -13,7 +13,6 @@ import {Item} from './item.model';
 export class ItemsComponent implements OnInit {
   subscription: Subscription;
   items: PageableDto<Item>;
-  token: string;
 
   constructor(private itemsService: ItemsService) {
   }
@@ -24,9 +23,6 @@ export class ItemsComponent implements OnInit {
         this.items = items;
       }
     );
-    // this.itemsService.getToken().subscribe(token => {
-    //   this.itemsService.getItems(token['token']);
-    // });
     this.itemsService.getItems();
   }
 

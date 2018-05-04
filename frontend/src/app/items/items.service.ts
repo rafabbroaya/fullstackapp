@@ -19,8 +19,11 @@ export class ItemsService {
     return this.http.get('api/token');
   }
 
-  getItems() {
+  getItem(id: number): Observable<Item> {
+    return this.http.get<Item>(Constants.INVENTORY_ITEMS + "/" + id);
+  }
 
+  getItems() {
     this.http.get(Constants.INVENTORY_ITEMS).subscribe(items => {
       this.items = <PageableDto<Item>>items;
       this.itemsChanged.next(this.items);
@@ -30,4 +33,6 @@ export class ItemsService {
   addItem(token: string, item: Item): Observable<Item> {
     return this.http.post<Item>(Constants.INVENTORY_ITEMS, item, {headers: new HttpHeaders().set('X-Auth-Token', token)});
   }
+
+
 }

@@ -17,13 +17,15 @@ import {AppService} from './app.service';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {ItemsComponent} from './items/items.component';
 import {ItemEditComponent} from './items/item-edit/item-edit.component';
-import { ItemShowComponent } from './items/item-show/item-show.component';
+import {ItemShowComponent} from './items/item-show/item-show.component';
+import { ItemImageComponent } from './items/item-image/item-image.component';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'dashboard'},
   {path: 'dashboard', component: DashboardComponent},
   {path: 'login', component: LoginComponent},
   {path: 'items', component: ItemsComponent},
+  {path: 'items/:id', component: ItemShowComponent},
   {path: 'item', component: ItemEditComponent}
 ];
 
@@ -45,7 +47,8 @@ export class XhrInterceptor implements HttpInterceptor {
     DashboardComponent,
     ItemsComponent,
     ItemEditComponent,
-    ItemShowComponent
+    ItemShowComponent,
+    ItemImageComponent
   ],
   imports: [
     RouterModule.forRoot(routes, {useHash: true}),

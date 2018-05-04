@@ -4,15 +4,28 @@
     <form (ngSubmit)="onSubmit(f)" #f="ngForm">
       <div class="row">
         <div class="col-sm-12 form-group">
-          <label for="description" class="control-label">Description</label>
-          <input id="description" name="description" type="text" class="form-control" ngModel
+          <label for="name" class="control-label">Name</label>
+          <input id="name" name="name" type="text" class="form-control" ngModel
                  required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <label for="description" class="control-label">Description</label>
+          <input id="description" name="description" type="text" class="form-control" ngModel>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-12 form-group">
           <label for="sellingPrice" class="control-label">Selling Price</label>
           <input id="sellingPrice" name="sellingPrice" type="number" class="form-control" ngModel
+                 required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <label for="stock" class="control-label">Stock</label>
+          <input id="stock" name="stock" type="number" class="form-control" ngModel
                  required>
         </div>
       </div>
