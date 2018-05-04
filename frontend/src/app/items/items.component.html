@@ -1,21 +1,23 @@
 <div class="container-fluid">
   <div class="row">
-    <div *ngFor="let item of getItems()" class="col-xs-11 col-sm-6 col-md-6 col-lg-4">
-      <div class="card">
-        <div class="row" style="box-sizing: border-box;">
-          <img *ngIf="item.base64Image; else noImage"
-               src="data:image/png;base64,{{item.base64Image}}"
-               class="imageSize col-xs-11 col-sm-11 col-md-12 col-lg-12">
-          <ng-template #noImage>
-            <img src="../../assets/noimage.png"
-                 class="imageSize col-xs-11 col-sm-11 col-md-12 col-lg-12">
-          </ng-template>
+    <div *ngFor="let item of getItems()" class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+      <a href="#">
+        <div class="card">
+          <div class="row" style="box-sizing: border-box;">
+            <img *ngIf="item.base64Image; else noImage"
+                 src="data:image/png;base64,{{item.base64Image}}"
+                 class="imageSize col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <ng-template #noImage>
+              <img src="../../assets/noimage.png"
+                   class="imageSize col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            </ng-template>
+          </div>
+          <div class="container-fluid">
+            <div class="row"><span>{{item.description}}</span></div>
+            <div class="row"><span class="money">${{item.sellingPrice}}</span></div>
+          </div>
         </div>
-        <div class="container-fluid">
-          <div class="row"><a>{{item.description}}</a></div>
-          <div class="row"><span>{{item.sellingPrice}}</span></div>
-        </div>
-      </div>
+      </a>
     </div>
   </div>
 </div>

@@ -1,3 +1,36 @@
-<p>
-  item-edit works!
-</p>
+<div class="panel panel-primary">
+  <div class="panel-heading">Item</div>
+  <div class="panel-body">
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <label for="description" class="control-label">Description</label>
+          <input id="description" name="description" type="text" class="form-control" ngModel
+                 required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <label for="sellingPrice" class="control-label">Selling Price</label>
+          <input id="sellingPrice" name="sellingPrice" type="number" class="form-control" ngModel
+                 required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <label for="image" class="control-label">Image</label>
+          <input id="image" name="image" type="file" class="form-control" (change)="onPicked(file)"
+                 #file ngModel>
+        </div>
+        <div class="col-sm-12">
+          <img src="{{image}}" class="imageSize">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 btn-group">
+          <button class="btn btn-primary" type="submit">Add</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

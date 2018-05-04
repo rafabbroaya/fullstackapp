@@ -17,6 +17,7 @@ import {AppService} from './app.service';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {ItemsComponent} from './items/items.component';
 import {ItemEditComponent} from './items/item-edit/item-edit.component';
+import { ItemShowComponent } from './items/item-show/item-show.component';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'dashboard'},
@@ -43,7 +44,8 @@ export class XhrInterceptor implements HttpInterceptor {
     LoginComponent,
     DashboardComponent,
     ItemsComponent,
-    ItemEditComponent
+    ItemEditComponent,
+    ItemShowComponent
   ],
   imports: [
     RouterModule.forRoot(routes, {useHash: true}),

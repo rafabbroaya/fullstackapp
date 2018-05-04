@@ -19,11 +19,15 @@ export class ItemsService {
     return this.http.get('api/token');
   }
 
-  getItems(token: string) {
-    this.http.get(Constants.INVENTORY_ITEMS, {headers: new HttpHeaders().set('X-Auth-Token', token)})
-    .subscribe(items => {
+  getItems() {
+
+    this.http.get(Constants.INVENTORY_ITEMS).subscribe(items => {
       this.items = <PageableDto<Item>>items;
       this.itemsChanged.next(this.items);
     });
+  }
+
+  addItem(token: string, item: Item): Observable<Item> {
+    return this.http.post<Item>(Constants.INVENTORY_ITEMS, item, {headers: new HttpHeaders().set('X-Auth-Token', token)});
   }
 }

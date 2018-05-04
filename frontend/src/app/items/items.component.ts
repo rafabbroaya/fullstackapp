@@ -24,9 +24,10 @@ export class ItemsComponent implements OnInit {
         this.items = items;
       }
     );
-    this.itemsService.getToken().subscribe(token => {
-      this.itemsService.getItems(token['token']);
-    });
+    // this.itemsService.getToken().subscribe(token => {
+    //   this.itemsService.getItems(token['token']);
+    // });
+    this.itemsService.getItems();
   }
 
   getItems(): Item[] {
